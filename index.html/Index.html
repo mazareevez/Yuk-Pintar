@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yuk Pintar - Belajar Jadi Seru</title>
+<style>
+:root {
+  --biru: #2563eb;
+  --biru-tua: #1e40af;
+  --biru-muda: #dbeafe;
+  --latar: #f1f7ff;
+  --teks: #1e293b;
+  --abu: #64748b;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; }
+html { scroll-behavior: smooth; }
+body { background: var(--latar); color: var(--teks); line-height: 1.7; font-size: 17px; }
+
+header {
+  background: linear-gradient(135deg, var(--biru-tua), var(--biru) 60%, #38bdf8);
+  color: white;
+  padding: 80px 20px 90px;
+  text-align: center;
+  border-radius: 0 0 40px 40px;
+}
+header h1 { font-size: 44px; line-height: 1.2; }
+header p { font-size: 19px; margin: 12px auto 0; max-width: 520px; opacity: 0.95; }
+
+.btn {
+  display: inline-block;
+  background: white;
+  color: var(--biru);
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-top: 24px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+
+section { max-width: 920px; margin: 0 auto; padding: 0 20px; }
+.atas { margin-top: -40px; }
+
+.card {
+  background: white;
+  padding: 26px;
+  border-radius: 20px;
+  margin-bottom: 18px;
+  border: 1px solid var(--biru-muda);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.08);
+}
+.card h3 { color: var(--biru); margin-bottom: 8px; font-size: 20px; }
+
+h2.judul { font-size: 28px; color: var(--biru-tua); margin: 34px 0 16px; }
+
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.grid .card { transition: transform 0.2s; margin-bottom: 0; }
+.grid .card:hover { transform: translateY(-4px); }
+.grid .card h3 { font-size: 19px; }
+
+.daftar { list-style: none; }
+.daftar li { padding: 6px 0 6px 34px; position: relative; }
+.daftar li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  background: var(--biru-muda);
+  color: var(--biru);
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.ajakan {
+  text-align: center;
+  background: linear-gradient(135deg, var(--biru), var(--biru-tua));
+  color: white;
+  border: none;
+  margin-top: 34px;
+}
+.ajakan h3 { color: white; font-size: 24px; }
+
+footer { text-align: center; padding: 36px 20px; color: var(--abu); font-size: 15px; }
+
+@media (max-width: 700px) {
+  body { font-size: 16px; }
+  .grid { grid-template-columns: 1fr; }
+  header { padding: 60px 20px 70px; }
+  header h1 { font-size: 34px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Yuk Pintar ✨</h1>
+  <p>Belajar SD sampai SMP jadi gampang dan seru, bareng Pak Guru.</p>
+  <a class="btn" href="#materi">Lihat Materi Gratis 👇</a>
+</header>
+
+<section class="atas">
+  <div class="card">
+    <h3>Halo, Selamat Datang!</h3>
+    <p>Saya guru di balik <b>Yuk Pintar</b>. Tujuan saya sederhana: anak-anak Indonesia tidak takut lagi sama pelajaran. Semua materi di sini saya jelaskan pakai bahasa sehari-hari. Ada contoh nyata dan latihan yang seru.</p>
+  </div>
+
+  <h2 class="judul" id="materi">Materi Unggulan</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>📐 Matematika</h3>
+      <p>Pecahan, KPK dan FPB, bangun datar, sampai aljabar SMP. Dijelaskan satu langkah demi satu langkah. Tidak bikin pusing.</p>
+    </div>
+    <div class="card">
+      <h3>📖 Bahasa Indonesia</h3>
+      <p>Belajar menulis karangan, memahami isi bacaan, dan tata bahasa. Semua yang sering keluar di ujian.</p>
+    </div>
+    <div class="card">
+      <h3>🌍 IPA & IPS</h3>
+      <p>Dari sistem pencernaan sampai peta Indonesia. Belajarnya pakai gambar dan cerita.</p>
+    </div>
+  </div>
+
+  <h2 class="judul">Kenapa Belajar di Yuk Pintar?</h2>
+  <div class="card">
+    <ul class="daftar">
+      <li>Bahasanya gampang dimengerti</li>
+      <li>Ada contoh soal dan pembahasannya</li>
+      <li>Cocok untuk belajar sendiri, atau untuk menemani anak belajar</li>
+    </ul>
+  </div>
+
+  <!-- GANTI nomor WhatsApp di bawah ini dengan nomor kamu. Format: 62 lalu nomor tanpa angka 0 di depan. -->
+  <div class="card ajakan">
+    <h3>Mau Tanya Soal atau Minta Materi?</h3>
+    <p>Chat saja. Saya bantu jawab.</p>
+    <a class="btn" href="https://wa.me/6281391088892">Chat WhatsApp</a>
+  </div>
+</section>
+
+<footer>© 2026 Yuk Pintar. Dibuat dengan semangat mengajar.</footer>
+
+</body>
+</html>
