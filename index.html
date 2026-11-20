@@ -3,149 +3,151 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yuk Pintar - Belajar Jadi Seru</title>
+<title>Yuk Pintar - Matematika Kelas 6</title>
 <style>
-:root {
-  --biru: #2563eb;
-  --biru-tua: #1e40af;
-  --biru-muda: #dbeafe;
-  --latar: #f1f7ff;
-  --teks: #1e293b;
-  --abu: #64748b;
-}
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; }
-html { scroll-behavior: smooth; }
-body { background: var(--latar); color: var(--teks); line-height: 1.7; font-size: 17px; }
-
-header {
-  background: linear-gradient(135deg, var(--biru-tua), var(--biru) 60%, #38bdf8);
-  color: white;
-  padding: 80px 20px 90px;
-  text-align: center;
-  border-radius: 0 0 40px 40px;
-}
-header h1 { font-size: 44px; line-height: 1.2; }
-header p { font-size: 19px; margin: 12px auto 0; max-width: 520px; opacity: 0.95; }
-
-.btn {
-  display: inline-block;
-  background: white;
-  color: var(--biru);
-  padding: 14px 28px;
-  border-radius: 999px;
-  font-weight: 700;
-  text-decoration: none;
-  margin-top: 24px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.btn:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
-
-section { max-width: 920px; margin: 0 auto; padding: 0 20px; }
-.atas { margin-top: -40px; }
-
-.card {
-  background: white;
-  padding: 26px;
-  border-radius: 20px;
-  margin-bottom: 18px;
-  border: 1px solid var(--biru-muda);
-  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.08);
-}
-.card h3 { color: var(--biru); margin-bottom: 8px; font-size: 20px; }
-
-h2.judul { font-size: 28px; color: var(--biru-tua); margin: 34px 0 16px; }
-
-.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.grid .card { transition: transform 0.2s; margin-bottom: 0; }
-.grid .card:hover { transform: translateY(-4px); }
-.grid .card h3 { font-size: 19px; }
-
-.daftar { list-style: none; }
-.daftar li { padding: 6px 0 6px 34px; position: relative; }
-.daftar li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  top: 8px;
-  width: 24px;
-  height: 24px;
-  line-height: 24px;
-  text-align: center;
-  background: var(--biru-muda);
-  color: var(--biru);
-  border-radius: 50%;
-  font-weight: 700;
-  font-size: 14px;
-}
-
-.ajakan {
-  text-align: center;
-  background: linear-gradient(135deg, var(--biru), var(--biru-tua));
-  color: white;
-  border: none;
-  margin-top: 34px;
-}
-.ajakan h3 { color: white; font-size: 24px; }
-
-footer { text-align: center; padding: 36px 20px; color: var(--abu); font-size: 15px; }
-
-@media (max-width: 700px) {
-  body { font-size: 16px; }
-  .grid { grid-template-columns: 1fr; }
-  header { padding: 60px 20px 70px; }
-  header h1 { font-size: 34px; }
-}
+*{box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
+body{margin:0;background:#FFF7E6;color:#333}
+header{background:#FF9F1C;color:white;padding:28px 18px;text-align:center;border-radius:0 0 28px 28px}
+header h1{margin:0;font-size:32px} header p{margin:8px 0 0;opacity:.95}
+.wrap{max-width:820px;margin:auto;padding:16px}
+.card{background:white;border-radius:18px;padding:18px;margin:16px 0;box-shadow:0 4px 14px rgba(0,0,0,.08)}
+h2{color:#E76F51;margin-top:0}
+h3{color:#2A9D8F}
+.badge{display:inline-block;background:#2A9D8F;color:white;padding:5px 12px;border-radius:20px;font-size:13px}
+table{width:100%;border-collapse:collapse;margin:10px 0}
+td,th{border:1px solid #eee;padding:10px;text-align:center}
+th{background:#FF9F1C;color:white}
+.contoh{background:#E9F7F3;border-left:5px solid #2A9D8F;padding:12px;border-radius:10px;margin:10px 0}
+button{background:#FF9F1C;border:none;color:white;padding:12px 18px;border-radius:12px;font-size:16px;cursor:pointer;width:100%;margin-top:10px}
+button:hover{background:#E76F51}
+.opt{background:#FFF3D6;border:2px solid #FFD166;padding:12px;border-radius:12px;margin:8px 0;cursor:pointer}
+.opt:hover{border-color:#FF9F1C}
+.opt.benar{background:#B7E4C7;border-color:#2A9D8F}
+.opt.salah{background:#FFC9C9;border-color:#E76F51}
+#skor{font-size:22px;text-align:center;font-weight:bold;color:#2A9D8F}
+footer{text-align:center;padding:20px;color:#999;font-size:13px}
 </style>
 </head>
 <body>
-
 <header>
-  <h1>Yuk Pintar ✨</h1>
-  <p>Belajar SD sampai SMP jadi gampang dan seru, bareng Pak Guru.</p>
-  <a class="btn" href="#materi">Lihat Materi Gratis 👇</a>
+<h1>🧮 Yuk Pintar</h1>
+<p>Matematika Kelas 6 SD • Bilangan Cacah sampai 1.000.000</p>
 </header>
 
-<section class="atas">
-  <div class="card">
-    <h3>Halo, Selamat Datang!</h3>
-    <p>Saya guru di balik <b>Yuk Pintar</b>. Tujuan saya sederhana: anak-anak Indonesia tidak takut lagi sama pelajaran. Semua materi di sini saya jelaskan pakai bahasa sehari-hari. Ada contoh nyata dan latihan yang seru.</p>
-  </div>
+<div class="wrap">
 
-  <h2 class="judul" id="materi">Materi Unggulan</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>📐 Matematika</h3>
-      <p>Pecahan, KPK dan FPB, bangun datar, sampai aljabar SMP. Dijelaskan satu langkah demi satu langkah. Tidak bikin pusing.</p>
-    </div>
-    <div class="card">
-      <h3>📖 Bahasa Indonesia</h3>
-      <p>Belajar menulis karangan, memahami isi bacaan, dan tata bahasa. Semua yang sering keluar di ujian.</p>
-    </div>
-    <div class="card">
-      <h3>🌍 IPA & IPS</h3>
-      <p>Dari sistem pencernaan sampai peta Indonesia. Belajarnya pakai gambar dan cerita.</p>
-    </div>
-  </div>
+<div class="card">
+<span class="badge">MATERI 1</span>
+<h2>1. Apa itu Bilangan Cacah?</h2>
+<p>Bilangan cacah adalah bilangan yang dimulai dari <b>0, 1, 2, 3, 4, ...</b> sampai seterusnya. Tidak ada minus, tidak ada koma.</p>
+<p>Di kelas 6, kita belajar sampai <b>1.000.000 (satu juta)</b>.</p>
+<div class="contoh"><b>Contoh:</b> 0, 5, 125, 10.000, 250.000, 1.000.000 → semua bilangan cacah.<br>Yang BUKAN: -5, 2,5, 1/2</div>
+</div>
 
-  <h2 class="judul">Kenapa Belajar di Yuk Pintar?</h2>
-  <div class="card">
-    <ul class="daftar">
-      <li>Bahasanya gampang dimengerti</li>
-      <li>Ada contoh soal dan pembahasannya</li>
-      <li>Cocok untuk belajar sendiri, atau untuk menemani anak belajar</li>
-    </ul>
-  </div>
+<div class="card">
+<span class="badge">MATERI 2</span>
+<h2>2. Nilai Tempat sampai 1.000.000</h2>
+<p>Ingat urutannya dari kanan ke kiri:</p>
+<table>
+<tr><th>Jutaan</th><th>Ratusan Ribu</th><th>Puluhan Ribu</th><th>Ribuan</th><th>Ratusan</th><th>Puluhan</th><th>Satuan</th></tr>
+<tr><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+</table>
+<p><b>Contoh: 456.789</b></p>
+<ul>
+<li>4 = 400.000 (ratusan ribu)</li>
+<li>5 = 50.000 (puluhan ribu)</li>
+<li>6 = 6.000 (ribuan)</li>
+<li>7 = 700 (ratusan)</li>
+<li>8 = 80 (puluhan)</li>
+<li>9 = 9 (satuan)</li>
+</ul>
+<div class="contoh"><b>Cara baca:</b> 456.789 dibaca <b>"Empat ratus lima puluh enam ribu tujuh ratus delapan puluh sembilan"</b></div>
+</div>
 
-  <!-- GANTI nomor WhatsApp di bawah ini dengan nomor kamu. Format: 62 lalu nomor tanpa angka 0 di depan. -->
-  <div class="card ajakan">
-    <h3>Mau Tanya Soal atau Minta Materi?</h3>
-    <p>Chat saja. Saya bantu jawab.</p>
-    <a class="btn" href="https://wa.me/6281391088892">Chat WhatsApp</a>
-  </div>
-</section>
+<div class="card">
+<span class="badge">MATERI 3</span>
+<h2>3. Membandingkan & Mengurutkan</h2>
+<p><b>Cara cepat:</b> Lihat dulu jumlah angkanya. Yang angkanya lebih banyak, nilainya lebih besar.</p>
+<p>Kalau jumlah angkanya sama, bandingkan dari kiri ke kanan.</p>
+<div class="contoh">
+<b>Contoh:</b><br>
+245.000 < 1.000.000 (karena 6 angka < 7 angka)<br>
+350.500 > 350.050 (ratusan sama, puluhan 500 > 050)<br>
+<b>Urutkan dari kecil:</b> 120.000, 45.000, 1.000.000 → <b>45.000, 120.000, 1.000.000</b>
+</div>
+</div>
 
-<footer>© 2026 Yuk Pintar. Dibuat dengan semangat mengajar.</footer>
+<div class="card">
+<span class="badge">MATERI 4</span>
+<h2>4. Operasi Hitung</h2>
+<h3>➕ Penjumlahan & ➖ Pengurangan</h3>
+<p>Harus lurus nilai tempatnya! Satuan dengan satuan, ribuan dengan ribuan.</p>
+<div class="contoh">425.000 + 175.000 = <b>600.000</b><br>800.000 - 275.000 = <b>525.000</b></div>
+<h3>✖️ Perkalian & ➗ Pembagian</h3>
+<div class="contoh">12.000 x 5 = <b>60.000</b><br>90.000 : 3 = <b>30.000</b><br>Tips: 90 : 3 = 30, lalu tambahkan 3 nol-nya lagi.</div>
+<h3>🔢 Pembulatan</h3>
+<p>Ke ribuan terdekat: lihat ratusannya. Kalau 500 ke atas, bulatkan ke atas.</p>
+<div class="contoh">456.789 dibulatkan ke ribuan terdekat → <b>457.000</b> (karena 789 sudah lebih dari 500)</div>
+</div>
 
+<div class="card">
+<span class="badge">KUIS • 10 SOAL</span>
+<h2>🎯 Ayo Latihan! Jawab & Lihat Skormu</h2>
+<p id="soalKe">Soal 1 dari 10</p>
+<h3 id="pertanyaan">...</h3>
+<div id="pilihan"></div>
+<p id="feedback"></p>
+<button onclick="soalBerikutnya()">Soal Berikutnya ➡️</button>
+<p id="skor"></p>
+</div>
+
+</div>
+<footer>Yuk Pintar • Belajar Matematika Jadi Seru • Kelas 6 SD</footer>
+
+<script>
+const soal=[
+{q:"Bilangan yang BUKAN bilangan cacah adalah...",a:["0","125.000","-5","1.000.000"],k:2},
+{q:"Nilai tempat angka 5 pada 356.789 adalah...",a:["5","500","50.000","500.000"],k:2},
+{q:"Cara membaca 250.000 yang benar...",a:["Dua ratus lima puluh ribu","Dua puluh lima ribu","Dua ratus lima ribu","Dua juta lima puluh ribu"],k:0},
+{q:"Yang paling besar adalah...",a:["99.999","100.000","999.999","1.000.000"],k:3},
+{q:"Urutkan dari yang TERKECIL: 300.000, 30.000, 3.000.000 (tapi maks 1 jt, jadi 999.999)",a:["30.000, 300.000, 999.999","300.000, 30.000, 999.999","999.999, 300.000, 30.000","30.000, 999.999, 300.000"],k:0},
+{q:"425.000 + 175.000 = ...",a:["500.000","600.000","590.000","610.000"],k:1},
+{q:"800.000 - 275.000 = ...",a:["525.000","575.000","535.000","625.000"],k:0},
+{q:"12.000 x 4 = ...",a:["44.000","48.000","40.000","52.000"],k:1},
+{q:"90.000 : 3 = ...",a:["3.000","30.000","300.000","9.000"],k:1},
+{q:"456.789 dibulatkan ke ribuan terdekat menjadi...",a:["456.000","457.000","460.000","450.000"],k:1},
+];
+let idx=0, benar=0, sudahJawab=false;
+function tampilkan(){
+  sudahJawab=false;
+  document.getElementById('soalKe').innerText=`Soal ${idx+1} dari 10`;
+  document.getElementById('pertanyaan').innerText=soal[idx].q;
+  document.getElementById('feedback').innerText="";
+  document.getElementById('skor').innerText="";
+  let html="";
+  soal[idx].a.forEach((pil,i)=>{
+    html+=`<div class="opt" onclick="jawab(this,${i})">${pil}</div>`;
+  });
+  document.getElementById('pilihan').innerHTML=html;
+}
+function jawab(el,i){
+  if(sudahJawab) return; sudahJawab=true;
+  if(i===soal[idx].k){ el.classList.add('benar'); benar++; document.getElementById('feedback').innerText="✅ BENAR! Hebat!"; }
+  else{ el.classList.add('salah'); document.getElementById('feedback').innerText="❌ Belum tepat. Coba ingat lagi materinya di atas!"; }
+}
+function soalBerikutnya(){
+  if(!sudahJawab){ alert("Jawab dulu ya! Klik salah satu jawaban."); return; }
+  idx++;
+  if(idx>=soal.length){
+    document.getElementById('skor').innerText=`🎉 SELESAI! Nilai kamu: ${benar*10} / 100 (${benar} benar dari 10 soal)`;
+    document.getElementById('pertanyaan').innerText="Kamu sudah menyelesaikan semua soal!";
+    document.getElementById('pilihan').innerHTML=`<button onclick="location.reload()">🔄 Ulangi Kuis</button>`;
+    document.getElementById('soalKe').innerText="Selesai!";
+    return;
+  }
+  tampilkan();
+}
+tampilkan();
+</script>
 </body>
 </html>
