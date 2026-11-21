@@ -34,7 +34,6 @@ footer{text-align:center;padding:20px;color:#999;font-size:13px}
 <header onclick="tampil('home')"><h1>🧮 Yuk Pintar</h1><p>Belajar Jadi Seru & Gampang!</p></header>
 <div class="wrap">
 
-<!-- HOME -->
 <div id="home">
 <div class="card" style="text-align:center;background:#2A9D8F;color:white"><h2 style="color:white">👋 Selamat Datang di Yuk Pintar!</h2><p>Pilih mata pelajaranmu, pilih kelasmu, langsung belajar + kuis!</p></div>
 <div class="card"><h2>📚 Pilih Mata Pelajaran</h2><div class="grid">
@@ -45,7 +44,6 @@ footer{text-align:center;padding:20px;color:#999;font-size:13px}
 </div></div>
 </div>
 
-<!-- MATEMATIKA JENJANG -->
 <div id="matematika" class="hilang">
 <button class="back" onclick="tampil('home')">⬅️ Kembali ke Beranda</button>
 <div class="card"><h2>🔢 Matematika</h2><h3>🏫 SD</h3><div class="grid">
@@ -62,7 +60,6 @@ footer{text-align:center;padding:20px;color:#999;font-size:13px}
 </div></div>
 </div>
 
-<!-- KELAS 6 MENU -->
 <div id="kelas6menu" class="hilang">
 <button class="back" onclick="tampil('matematika')">⬅️ Kembali ke Pilih Kelas</button>
 <div class="card"><h2>📚 Matematika Kelas 6 SD</h2><p>Pilih materimu:</p>
@@ -74,112 +71,47 @@ footer{text-align:center;padding:20px;color:#999;font-size:13px}
 </div></div>
 </div>
 
-<!-- MATERI 1 -->
 <div id="bilangan" class="hilang">
 <button class="back" onclick="tampil('kelas6menu')">⬅️ Kembali ke Materi Kelas 6</button>
 <div class="card"><span class="badge">KELAS 6 • MATERI 1</span><h2>Bilangan Cacah sampai 1.000.000</h2><p>Bilangan cacah = <b>0, 1, 2, 3, ...</b> sampai <b>1.000.000</b>.</p></div>
 <div class="card"><h2>1. Nilai Tempat</h2><table><tr><th>Jutaan</th><th>Ratusan Ribu</th><th>Puluhan Ribu</th><th>Ribuan</th><th>Ratusan</th><th>Puluhan</th><th>Satuan</th></tr><tr><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr></table><p><b>456.789:</b> 4=400.000, 5=50.000, 6=6.000, 7=700, 8=80, 9=9</p><div class="contoh"><b>Cara baca:</b> "Empat ratus lima puluh enam ribu tujuh ratus delapan puluh sembilan"</div></div>
-<div class="card"><h2>2. Membandingkan</h2><div class="contoh">245.000 < 1.000.000<br>350.500 > 350.050</div></div>
-<div class="card"><h2>3. Operasi Hitung</h2><div class="contoh">425.000 + 175.000 = <b>600.000</b><br>800.000 - 275.000 = <b>525.000</b><br>12.000 x 5 = <b>60.000</b><br>90.000 : 3 = <b>30.000</b><br>456.789 dibulatkan ke ribuan → <b>457.000</b></div></div>
-<div class="card"><h2>🎯 Kuis Bilangan Cacah</h2><p id="soalKe">Soal 1 dari 10</p><h3 id="pertanyaan"></h3><div id="pilihan"></div><p id="feedback"></p><button onclick="soalBerikutnya()">Soal Berikutnya ➡️</button><p id="skor" class="skor"></p></div>
+<div class="card"><h2>2. Membandingkan</h2><div class="contoh">245.000 &lt; 1.000.000<br>350.500 &gt; 350.050</div></div>
+<div class="card"><h2>3. Operasi Hitung</h2><div class="contoh">425.000 + 175.000 = <b>600.000</b><br>800.000 - 275.000 = <b>525.000</b><br>12.000 x 5 = <b>60.000</b><br>90.000 : 3 = <b>30.000</b><br>456.789 dibulatkan ke ribuan = <b>457.000</b></div></div>
+<div class="card"><h2>🎯 Kuis Bilangan Cacah</h2><p id="soalKe">Soal 1 dari 10</p><h3 id="pertanyaan"></h3><div id="pilihan"></div><p id="feedback"></p><button onclick="next1()">Soal Berikutnya ➡️</button><p id="skor" class="skor"></p></div>
 </div>
 
-<!-- MATERI 2 -->
 <div id="kpkfpb" class="hilang">
 <button class="back" onclick="tampil('kelas6menu')">⬅️ Kembali ke Materi Kelas 6</button>
 <div class="card"><span class="badge">KELAS 6 • MATERI 2</span><h2>🔢 KPK dan FPB</h2><p><b>KPK</b> = Kelipatan Persekutuan Terkecil<br><b>FPB</b> = Faktor Persekutuan Terbesar</p></div>
 <div class="card"><h2>1. Kelipatan & Faktor</h2><p><b>Kelipatan 4:</b> 4, 8, 12, 16, 20...<br><b>Faktor 12:</b> 1, 2, 3, 4, 6, 12<br><b>Prima:</b> 2, 3, 5, 7, 11, 13...</p></div>
 <div class="card"><h2>2. Pohon Faktor</h2><div class="contoh">12 = 2² x 3<br>18 = 2 x 3²<br><b>FPB = Sama, Kecil:</b> 2 x 3 = <b>6</b><br><b>KPK = Semua, Besar:</b> 2² x 3² = <b>36</b></div></div>
 <div class="card"><h2>3. Soal Cerita</h2><div class="contoh"><b>KPK = Bersama lagi:</b> Lampu tiap 6 & 8 detik → bersama lagi 24 detik<br><b>FPB = Dibagi rata:</b> 12 apel & 18 jeruk → 6 bingkisan, isi 2 apel & 3 jeruk</div></div>
-<div class="card"><h2>🎯 Kuis KPK & FPB</h2><p id="soalKe2">Soal 1 dari 10</p><h3 id="pertanyaan2"></h3><div id="pilihan2"></div><p id="feedback2"></p><button onclick="soalBerikutnya2()">Soal Berikutnya ➡️</button><p id="skor2" class="skor"></p></div>
+<div class="card"><h2>🎯 Kuis KPK & FPB</h2><p id="soalKe2">Soal 1 dari 10</p><h3 id="pertanyaan2"></h3><div id="pilihan2"></div><p id="feedback2"></p><button onclick="next2()">Soal Berikutnya ➡️</button><p id="skor2" class="skor"></p></div>
 </div>
 
-<!-- MATERI 3 PECAHAN -->
 <div id="pecahan" class="hilang">
 <button class="back" onclick="tampil('kelas6menu')">⬅️ Kembali ke Materi Kelas 6</button>
 <div class="card"><span class="badge">KELAS 6 • MATERI 3 • BARU</span><h2>🍕 Pecahan, Desimal & Persen</h2><p>Mereka itu <b>teman yang sama</b>, cuma beda baju! 1/2 = 0,5 = 50% itu nilainya SAMA.</p></div>
-
-<div class="card"><h2>1. Apa itu Pecahan?</h2>
-<p><b>1/2</b> artinya 1 potong dari 2 potong yang sama besar.</p>
-<p>Atas = <b>Pembilang</b> (yang diambil)<br>Bawah = <b>Penyebut</b> (total potongan)</p>
-<div class="contoh"><b>Jenis-jenis:</b><br>• Pecahan Biasa: 1/2, 3/4<br>• Pecahan Campuran: 1 1/2 (satu setengah)<br>• Pecahan Senilai: 1/2 = 2/4 = 3/6 (atas bawah dikali angka yang sama)</div>
-<p><b>Menyederhanakan:</b> Bagi atas & bawah dengan FPB-nya!<br>6/8 → bagi 2 → <b>3/4</b></p>
-</div>
-
-<div class="card"><h2>2. Operasi Pecahan - Wajib Hafal!</h2>
-<div class="contoh">
-<b>➕➖ Penjumlahan & Pengurangan: PENYEBUT HARUS SAMA!</b><br>
-1/4 + 2/4 = 3/4 (penyebut tetap, pembilang ditambah)<br>
-1/2 + 1/4 = 2/4 + 1/4 = <b>3/4</b> (samakan dulu jadi 4)<br><br>
-<b>✖️ Perkalian: Atas x Atas, Bawah x Bawah</b><br>
-1/2 x 2/3 = 2/6 = <b>1/3</b><br><br>
-<b>➗ Pembagian: DIBALIK lalu DIKALI</b><br>
-1/2 : 1/4 = 1/2 x 4/1 = 4/2 = <b>2</b>
-</div>
-</div>
-
-<div class="card"><h2>3. Desimal & Persen - Cara Ubah-ubahnya</h2>
-<table><tr><th>Pecahan</th><th>Desimal</th><th>Persen</th></tr>
-<tr><td>1/2</td><td>0,5</td><td>50%</td></tr>
-<tr><td>1/4</td><td>0,25</td><td>25%</td></tr>
-<tr><td>3/4</td><td>0,75</td><td>75%</td></tr>
-<tr><td>1/10</td><td>0,1</td><td>10%</td></tr>
-<tr><td>1/5</td><td>0,2</td><td>20%</td></tr>
-</table>
-<div class="contoh">
-<b>Rumus Cepat:</b><br>
-Pecahan → Desimal: Pembilang : Penyebut. Contoh 1/2 = 1:2 = <b>0,5</b><br>
-Pecahan → Persen: Pecahan x 100%. Contoh 1/4 x 100% = <b>25%</b><br>
-Desimal → Persen: Geser koma 2 ke kanan. 0,5 = <b>50%</b><br>
-Persen → Pecahan: 50% = 50/100 = <b>1/2</b>
-</div>
-</div>
-
-<div class="card"><h2>4. Mengurutkan Pecahan</h2>
-<div class="contoh">Urutkan 1/2, 1/4, 3/4 dari kecil:<br>Samakan penyebut jadi 4 → 2/4, 1/4, 3/4 → <b>1/4, 1/2, 3/4</b><br><br>Tips: Kalau pembilangnya sama, yang penyebutnya BESAR malah nilainya KECIL. Contoh 1/4 < 1/2, karena potongannya lebih kecil-kecil.</div>
-</div>
-
-<div class="card"><h2>🎯 Kuis Pecahan, Desimal & Persen</h2><p id="soalKe3">Soal 1 dari 10</p><h3 id="pertanyaan3"></h3><div id="pilihan3"></div><p id="feedback3"></p><button onclick="soalBerikutnya3()">Soal Berikutnya ➡️</button><p id="skor3" class="skor"></p></div>
+<div class="card"><h2>1. Apa itu Pecahan?</h2><p><b>1/2</b> artinya 1 potong dari 2 potong yang sama besar.</p><p>Atas = <b>Pembilang</b><br>Bawah = <b>Penyebut</b></p><div class="contoh"><b>Jenis-jenis:</b><br>• Biasa: 1/2, 3/4<br>• Campuran: 1 1/2<br>• Senilai: 1/2 = 2/4 = 3/6</div><p><b>Menyederhanakan:</b> Bagi atas & bawah dengan FPB! 6/8 → <b>3/4</b></p></div>
+<div class="card"><h2>2. Operasi Pecahan</h2><div class="contoh"><b>➕➖ Penjumlahan & Pengurangan: PENYEBUT HARUS SAMA!</b><br>1/4 + 2/4 = 3/4<br>1/2 + 1/4 = 2/4 + 1/4 = <b>3/4</b><br><br><b>✖️ Perkalian: Atas x Atas, Bawah x Bawah</b><br>1/2 x 2/3 = 2/6 = <b>1/3</b><br><br><b>➗ Pembagian: DIBALIK lalu DIKALI</b><br>1/2 : 1/4 = 1/2 x 4/1 = <b>2</b></div></div>
+<div class="card"><h2>3. Desimal & Persen</h2><table><tr><th>Pecahan</th><th>Desimal</th><th>Persen</th></tr><tr><td>1/2</td><td>0,5</td><td>50%</td></tr><tr><td>1/4</td><td>0,25</td><td>25%</td></tr><tr><td>3/4</td><td>0,75</td><td>75%</td></tr><tr><td>1/10</td><td>0,1</td><td>10%</td></tr><tr><td>1/5</td><td>0,2</td><td>20%</td></tr></table><div class="contoh"><b>Rumus Cepat:</b><br>Pecahan → Desimal: 1/2 = 1:2 = <b>0,5</b><br>Pecahan → Persen: 1/4 x 100% = <b>25%</b><br>Desimal → Persen: 0,5 = <b>50%</b><br>Persen → Pecahan: 50% = 50/100 = <b>1/2</b></div></div>
+<div class="card"><h2>4. Mengurutkan Pecahan</h2><div class="contoh">Urutkan 1/2, 1/4, 3/4 dari kecil:<br>Samakan penyebut jadi 4 → 2/4, 1/4, 3/4 → <b>1/4, 1/2, 3/4</b></div></div>
+<div class="card"><h2>🎯 Kuis Pecahan, Desimal & Persen</h2><p id="soalKe3">Soal 1 dari 10</p><h3 id="pertanyaan3"></h3><div id="pilihan3"></div><p id="feedback3"></p><button onclick="next3()">Soal Berikutnya ➡️</button><p id="skor3" class="skor"></p></div>
 </div>
 
 </div>
 <footer>Yuk Pintar • Belajar Matematika Jadi Seru</footer>
 <script>
 function tampil(id){
-  ['home','matematika','kelas6menu','bilangan','kpkfpb','pecahan'].forEach(x=>document.getElementById(x).classList.add('hilang'));
-  document.getElementById(id).classList.remove('hilang'); window.scrollTo(0,0);
-  if(id==='bilangan') tampilkan(); if(id==='kpkfpb') tampilkan2(); if(id==='pecahan') tampilkan3();
+  var semua=['home','matematika','kelas6menu','bilangan','kpkfpb','pecahan'];
+  for(var i=0;i<semua.length;i++){document.getElementById(semua[i]).classList.add('hilang');}
+  document.getElementById(id).classList.remove('hilang');
+  window.scrollTo(0,0);
+  if(id==='bilangan') start1();
+  if(id==='kpkfpb') start2();
+  if(id==='pecahan') start3();
 }
-function buatKuis(prefix, data){
-  let state={idx:0,benar:0,sudah:false};
-  function render(){
-    state.sudah=false;
-    document.getElementById('soalKe'+prefix).innerText=`Soal ${state.idx+1} dari 10`;
-    document.getElementById('pertanyaan'+prefix).innerText=data[state.idx].q;
-    document.getElementById('feedback'+prefix).innerText=""; document.getElementById('skor'+prefix).innerText="";
-    let h=""; data[state.idx].a.forEach((p,i)=>h+=`<div class="opt" onclick="window.jawab_${prefix}(this,${i})">${p}</div>`);
-    document.getElementById('pilihan'+prefix).innerHTML=h;
-  }
-  window['jawab_'+prefix]=function(el,i){
-    if(state.sudah) return; state.sudah=true;
-    if(i===data[state.idx].k){el.classList.add('benar');state.benar++;document.getElementById('feedback'+prefix).innerText="✅ BENAR! Hebat!";}
-    else{el.classList.add('salah');document.getElementById('feedback'+prefix).innerText="❌ Belum tepat, coba lagi!";}
-  };
-  window['soalBerikutnya'+prefix]=function(){
-    if(!state.sudah){alert("Jawab dulu ya!");return;}
-    state.idx++;
-    if(state.idx>=data.length){
-      document.getElementById('skor'+prefix).innerText=`🎉 Nilai kamu: ${state.benar*10} / 100`;
-      document.getElementById('pertanyaan'+prefix).innerText="Selesai!";
-      document.getElementById('pilihan'+prefix).innerHTML=`<button onclick="window.reset_${prefix}()">🔄 Ulangi</button>`;
-      document.getElementById('soalKe'+prefix).innerText="Selesai!"; return;
-    }
-    render();
-  };
-  window['reset_'+prefix]=function(){state.idx=0;state.benar=0;render();};
-  return {start:()=>{state.idx=0;state.benar=0;render();}};
-}
-const k1=buatKuis('',[
+var data1=[
 {q:"Bilangan yang BUKAN bilangan cacah...",a:["0","125.000","-5","1.000.000"],k:2},
 {q:"Nilai tempat angka 5 pada 356.789...",a:["5","500","50.000","500.000"],k:2},
 {q:"Cara membaca 250.000...",a:["Dua ratus lima puluh ribu","Dua puluh lima ribu","Dua ratus lima ribu","Dua juta lima puluh ribu"],k:0},
@@ -189,9 +121,9 @@ const k1=buatKuis('',[
 {q:"800.000 - 275.000 = ...",a:["525.000","575.000","535.000","625.000"],k:0},
 {q:"12.000 x 4 = ...",a:["44.000","48.000","40.000","52.000"],k:1},
 {q:"90.000 : 3 = ...",a:["3.000","30.000","300.000","9.000"],k:1},
-{q:"456.789 dibulatkan ke ribuan...",a:["456.000","457.000","460.000","450.000"],k:1},
-]);
-const k2=buatKuis('2',[
+{q:"456.789 dibulatkan ke ribuan...",a:["456.000","457.000","460.000","450.000"],k:1}
+];
+var data2=[
 {q:"Faktor dari 12 adalah...",a:["1,2,3,4,6,12","1,2,4,8,12","2,4,6,8","1,3,5,12"],k:0},
 {q:"Kelipatan dari 6 adalah...",a:["6,12,18,24,...","1,2,3,6","6,8,10,12","2,4,6,8"],k:0},
 {q:"Faktorisasi prima dari 12...",a:["2 x 6","2² x 3","2 x 3²","3 x 4"],k:1},
@@ -201,9 +133,9 @@ const k2=buatKuis('2',[
 {q:"KPK dari 4 dan 6...",a:["10","12","24","6"],k:1},
 {q:"Bus A tiap 6 menit, Bus B tiap 8 menit. Ketemu lagi setelah... (KPK)",a:["14 menit","24 menit","48 menit","12 menit"],k:1},
 {q:"12 apel & 18 jeruk dibuat bingkisan sama banyak. Bingkisan terbanyak... (FPB)",a:["12","6","18","3"],k:1},
-{q:"KPK dari 6 dan 10...",a:["16","30","60","20"],k:1},
-]);
-const k3=buatKuis('3',[
+{q:"KPK dari 6 dan 10...",a:["16","30","60","20"],k:1}
+];
+var data3=[
 {q:"Pada pecahan 3/4, yang disebut pembilang adalah...",a:["4","3","3/4","1"],k:1},
 {q:"Pecahan senilai dengan 1/2 adalah...",a:["1/4","2/4","3/4","1/3"],k:1},
 {q:"Bentuk paling sederhana dari 6/8 adalah...",a:["3/4","6/8","2/3","1/2"],k:0},
@@ -213,9 +145,23 @@ const k3=buatKuis('3',[
 {q:"1/2 : 1/4 = ...",a:["1/8","2","1/2","4"],k:1},
 {q:"Bentuk desimal dari 1/2 adalah...",a:["0,2","0,5","0,25","1,2"],k:1},
 {q:"Bentuk persen dari 3/4 adalah...",a:["25%","50%","75%","30%"],k:2},
-{q:"Urutkan dari TERKECIL: 1/2, 1/4, 3/4",a:["1/4, 1/2, 3/4","1/2, 1/4, 3/4","3/4, 1/2, 1/4","1/4, 3/4, 1/2"],k:0},
-]);
-function tampilkan(){k1.start();} function tampilkan2(){k2.start();} function tampilkan3(){k3.start();}
+{q:"Urutkan dari TERKECIL: 1/2, 1/4, 3/4",a:["1/4, 1/2, 3/4","1/2, 1/4, 3/4","3/4, 1/2, 1/4","1/4, 3/4, 1/2"],k:0}
+];
+var i1=0,b1=0,s1=false;
+var i2=0,b2=0,s2=false;
+var i3=0,b3=0,s3=false;
+function start1(){i1=0;b1=0;show1();}
+function show1(){s1=false;document.getElementById('soalKe').innerText='Soal '+(i1+1)+' dari 10';document.getElementById('pertanyaan').innerText=data1[i1].q;document.getElementById('feedback').innerText='';document.getElementById('skor').innerText='';var h='';for(var j=0;j<data1[i1].a.length;j++){h+='<div class="opt" onclick="jawab1(this,'+j+')">'+data1[i1].a[j]+'</div>';}document.getElementById('pilihan').innerHTML=h;}
+function jawab1(el,j){if(s1)return;s1=true;if(j===data1[i1].k){el.classList.add('benar');b1++;document.getElementById('feedback').innerText='✅ BENAR! Hebat!';}else{el.classList.add('salah');document.getElementById('feedback').innerText='❌ Belum tepat!';}}
+function next1(){if(!s1){alert('Jawab dulu ya!');return;}i1++;if(i1>=data1.length){document.getElementById('skor').innerText='🎉 Nilai kamu: '+(b1*10)+' / 100';document.getElementById('pertanyaan').innerText='Selesai!';document.getElementById('pilihan').innerHTML='<button onclick="start1()">🔄 Ulangi</button>';document.getElementById('soalKe').innerText='Selesai!';return;}show1();}
+function start2(){i2=0;b2=0;show2();}
+function show2(){s2=false;document.getElementById('soalKe2').innerText='Soal '+(i2+1)+' dari 10';document.getElementById('pertanyaan2').innerText=data2[i2].q;document.getElementById('feedback2').innerText='';document.getElementById('skor2').innerText='';var h='';for(var j=0;j<data2[i2].a.length;j++){h+='<div class="opt" onclick="jawab2(this,'+j+')">'+data2[i2].a[j]+'</div>';}document.getElementById('pilihan2').innerHTML=h;}
+function jawab2(el,j){if(s2)return;s2=true;if(j===data2[i2].k){el.classList.add('benar');b2++;document.getElementById('feedback2').innerText='✅ BENAR! Hebat!';}else{el.classList.add('salah');document.getElementById('feedback2').innerText='❌ Belum tepat!';}}
+function next2(){if(!s2){alert('Jawab dulu ya!');return;}i2++;if(i2>=data2.length){document.getElementById('skor2').innerText='🎉 Nilai kamu: '+(b2*10)+' / 100';document.getElementById('pertanyaan2').innerText='Selesai!';document.getElementById('pilihan2').innerHTML='<button onclick="start2()">🔄 Ulangi</button>';document.getElementById('soalKe2').innerText='Selesai!';return;}show2();}
+function start3(){i3=0;b3=0;show3();}
+function show3(){s3=false;document.getElementById('soalKe3').innerText='Soal '+(i3+1)+' dari 10';document.getElementById('pertanyaan3').innerText=data3[i3].q;document.getElementById('feedback3').innerText='';document.getElementById('skor3').innerText='';var h='';for(var j=0;j<data3[i3].a.length;j++){h+='<div class="opt" onclick="jawab3(this,'+j+')">'+data3[i3].a[j]+'</div>';}document.getElementById('pilihan3').innerHTML=h;}
+function jawab3(el,j){if(s3)return;s3=true;if(j===data3[i3].k){el.classList.add('benar');b3++;document.getElementById('feedback3').innerText='✅ BENAR! Hebat!';}else{el.classList.add('salah');document.getElementById('feedback3').innerText='❌ Belum tepat!';}}
+function next3(){if(!s3){alert('Jawab dulu ya!');return;}i3++;if(i3>=data3.length){document.getElementById('skor3').innerText='🎉 Nilai kamu: '+(b3*10)+' / 100';document.getElementById('pertanyaan3').innerText='Selesai!';document.getElementById('pilihan3').innerHTML='<button onclick="start3()">🔄 Ulangi</button>';document.getElementById('soalKe3').innerText='Selesai!';return;}show3();}
 </script>
 </body>
 </html>
