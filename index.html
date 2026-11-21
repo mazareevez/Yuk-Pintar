@@ -25,7 +25,7 @@ button.back{background:#eee;color:#333}
 .opt{background:#FFF3D6;border:2px solid #FFD166;padding:12px;border-radius:12px;margin:8px 0;cursor:pointer}
 .opt.benar{background:#B7E4C7;border-color:#2A9D8F}
 .opt.salah{background:#FFC9C9;border-color:#E76F51}
-#skor,#skor2{font-size:20px;text-align:center;font-weight:bold;color:#2A9D8F}
+.skor{font-size:20px;text-align:center;font-weight:bold;color:#2A9D8F}
 footer{text-align:center;padding:20px;color:#999;font-size:13px}
 .hilang{display:none}
 </style>
@@ -54,7 +54,7 @@ footer{text-align:center;padding:20px;color:#999;font-size:13px}
 <div class="pilih" onclick="alert('Kelas 3 Segera Hadir!')">Kelas 3<small>Segera Hadir</small></div>
 <div class="pilih" onclick="alert('Kelas 4 Segera Hadir!')">Kelas 4<small>Segera Hadir</small></div>
 <div class="pilih" onclick="alert('Kelas 5 Segera Hadir!')">Kelas 5<small>Segera Hadir</small></div>
-<div class="pilih" onclick="tampil('kelas6menu')" style="background:#B7E4C7;border-color:#2A9D8F">Kelas 6<small>✅ 2 Materi</small></div>
+<div class="pilih" onclick="tampil('kelas6menu')" style="background:#B7E4C7;border-color:#2A9D8F">Kelas 6<small>✅ 3 Materi</small></div>
 </div><h3>🏫 SMP</h3><div class="grid">
 <div class="pilih" onclick="alert('Kelas 7 Segera Hadir!')">Kelas 7<small>Segera Hadir</small></div>
 <div class="pilih" onclick="alert('Kelas 8 Segera Hadir!')">Kelas 8<small>Segera Hadir</small></div>
@@ -62,104 +62,32 @@ footer{text-align:center;padding:20px;color:#999;font-size:13px}
 </div></div>
 </div>
 
-<!-- KELAS 6 MENU MATERI -->
+<!-- KELAS 6 MENU -->
 <div id="kelas6menu" class="hilang">
 <button class="back" onclick="tampil('matematika')">⬅️ Kembali ke Pilih Kelas</button>
 <div class="card"><h2>📚 Matematika Kelas 6 SD</h2><p>Pilih materimu:</p>
 <div class="grid">
-<div class="pilih" onclick="tampil('bilangan')" style="background:#B7E4C7">1. Bilangan Cacah<small>sampai 1.000.000 • ✅ Ada Kuis</small></div>
-<div class="pilih" onclick="tampil('kpkfpb')" style="background:#FFD6E8;border-color:#E76F51">2. KPK dan FPB<small>✅ Ada Kuis</small></div>
+<div class="pilih" onclick="tampil('bilangan')" style="background:#B7E4C7">1. Bilangan Cacah<small>sampai 1.000.000</small></div>
+<div class="pilih" onclick="tampil('kpkfpb')" style="background:#FFD6E8;border-color:#E76F51">2. KPK dan FPB<small>&nbsp;</small></div>
+<div class="pilih" onclick="tampil('pecahan')" style="background:#D6E8FF;border-color:#2A9D8F">3. Pecahan, Desimal & Persen<small>✅ Baru!</small></div>
+<div class="pilih" onclick="alert('Materi 4 Segera Hadir!')">4. Segera Hadir<small>&nbsp;</small></div>
 </div></div>
 </div>
 
-<!-- MATERI 1 BILANGAN CACAH -->
+<!-- MATERI 1 -->
 <div id="bilangan" class="hilang">
 <button class="back" onclick="tampil('kelas6menu')">⬅️ Kembali ke Materi Kelas 6</button>
 <div class="card"><span class="badge">KELAS 6 • MATERI 1</span><h2>Bilangan Cacah sampai 1.000.000</h2><p>Bilangan cacah = <b>0, 1, 2, 3, ...</b> sampai <b>1.000.000</b>.</p></div>
 <div class="card"><h2>1. Nilai Tempat</h2><table><tr><th>Jutaan</th><th>Ratusan Ribu</th><th>Puluhan Ribu</th><th>Ribuan</th><th>Ratusan</th><th>Puluhan</th><th>Satuan</th></tr><tr><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr></table><p><b>456.789:</b> 4=400.000, 5=50.000, 6=6.000, 7=700, 8=80, 9=9</p><div class="contoh"><b>Cara baca:</b> "Empat ratus lima puluh enam ribu tujuh ratus delapan puluh sembilan"</div></div>
-<div class="card"><h2>2. Membandingkan</h2><div class="contoh">245.000 < 1.000.000<br>350.500 > 350.050<br>Urut kecil: 45.000, 120.000, 1.000.000</div></div>
+<div class="card"><h2>2. Membandingkan</h2><div class="contoh">245.000 < 1.000.000<br>350.500 > 350.050</div></div>
 <div class="card"><h2>3. Operasi Hitung</h2><div class="contoh">425.000 + 175.000 = <b>600.000</b><br>800.000 - 275.000 = <b>525.000</b><br>12.000 x 5 = <b>60.000</b><br>90.000 : 3 = <b>30.000</b><br>456.789 dibulatkan ke ribuan → <b>457.000</b></div></div>
-<div class="card"><h2>🎯 Kuis Bilangan Cacah</h2><p id="soalKe">Soal 1 dari 10</p><h3 id="pertanyaan"></h3><div id="pilihan"></div><p id="feedback"></p><button onclick="soalBerikutnya()">Soal Berikutnya ➡️</button><p id="skor"></p></div>
+<div class="card"><h2>🎯 Kuis Bilangan Cacah</h2><p id="soalKe">Soal 1 dari 10</p><h3 id="pertanyaan"></h3><div id="pilihan"></div><p id="feedback"></p><button onclick="soalBerikutnya()">Soal Berikutnya ➡️</button><p id="skor" class="skor"></p></div>
 </div>
 
-<!-- MATERI 2 KPK & FPB -->
+<!-- MATERI 2 -->
 <div id="kpkfpb" class="hilang">
 <button class="back" onclick="tampil('kelas6menu')">⬅️ Kembali ke Materi Kelas 6</button>
-<div class="card"><span class="badge">KELAS 6 • MATERI 2</span><h2>🔢 KPK dan FPB</h2><p><b>KPK</b> = Kelipatan Persekutuan Terkecil (yang sama & paling kecil)<br><b>FPB</b> = Faktor Persekutuan Terbesar (pembagi yang sama & paling besar)</p></div>
-<div class="card"><h2>1. Ingat Dulu: Kelipatan & Faktor</h2>
-<p><b>Kelipatan 4:</b> 4, 8, 12, 16, 20, 24, ... (dikali 1,2,3...)</p>
-<p><b>Faktor 12:</b> 1, 2, 3, 4, 6, 12 (bilangan yang bisa membagi 12 sampai habis)</p>
-<p><b>Bilangan Prima:</b> 2, 3, 5, 7, 11, 13, 17, 19... (hanya bisa dibagi 1 & dirinya sendiri)</p>
-</div>
-<div class="card"><h2>2. Cara Cari KPK & FPB - Pohon Faktor</h2>
-<p><b>Contoh: KPK & FPB dari 12 dan 18</b></p>
-<div class="contoh">
-12 = 2 x 2 x 3 = <b>2² x 3</b><br>
-18 = 2 x 3 x 3 = <b>2 x 3²</b><br><br>
-<b>FPB = ambil yang SAMA, pangkat paling KECIL</b><br>
-Sama = 2 dan 3 → 2¹ x 3¹ = <b>6</b><br><br>
-<b>KPK = ambil SEMUA, pangkat paling BESAR</b><br>
-Semua = 2² x 3² = 4 x 9 = <b>36</b>
-</div>
-<p><b>Tips Hafalan:</b><br>FPB = <b>S</b>ama, <b>K</b>ecil (S-K)<br>KPK = <b>S</b>emua, <b>B</b>esar (S-B)</p>
-</div>
-<div class="card"><h2>3. Soal Cerita - Ini yang Sering Keluar!</h2>
-<div class="contoh">
-<b>Soal KPK - "Bersama-sama lagi / Berbunyi bersama":</b><br>
-Lampu A menyala tiap 6 detik, Lampu B tiap 8 detik. Kapan menyala bersama lagi?<br>
-→ KPK 6 & 8 = <b>24 detik</b><br><br>
-<b>Soal FPB - "Dibagi rata / Bingkisan terbanyak":</b><br>
-Ibu punya 12 apel & 18 jeruk, mau dibuat bingkisan sama banyak. Berapa bingkisan terbanyak?<br>
-→ FPB 12 & 18 = <b>6 bingkisan</b>. Isi tiap bingkisan: 2 apel & 3 jeruk.
-</div>
-</div>
-<div class="card"><h2>🎯 Kuis KPK & FPB</h2><p id="soalKe2">Soal 1 dari 10</p><h3 id="pertanyaan2"></h3><div id="pilihan2"></div><p id="feedback2"></p><button onclick="soalBerikutnya2()">Soal Berikutnya ➡️</button><p id="skor2"></p></div>
-</div>
-
-</div>
-<footer>Yuk Pintar • Belajar Matematika Jadi Seru</footer>
-<script>
-function tampil(id){
-  ['home','matematika','kelas6menu','bilangan','kpkfpb'].forEach(x=>document.getElementById(x).classList.add('hilang'));
-  document.getElementById(id).classList.remove('hilang'); window.scrollTo(0,0);
-  if(id==='bilangan') tampilkan(); if(id==='kpkfpb') tampilkan2();
-}
-// KUIS 1
-const soal=[
-{q:"Bilangan yang BUKAN bilangan cacah...",a:["0","125.000","-5","1.000.000"],k:2},
-{q:"Nilai tempat angka 5 pada 356.789...",a:["5","500","50.000","500.000"],k:2},
-{q:"Cara membaca 250.000...",a:["Dua ratus lima puluh ribu","Dua puluh lima ribu","Dua ratus lima ribu","Dua juta lima puluh ribu"],k:0},
-{q:"Yang paling besar...",a:["99.999","100.000","999.999","1.000.000"],k:3},
-{q:"Urutkan dari TERKECIL: 300.000, 30.000, 999.999",a:["30.000, 300.000, 999.999","300.000, 30.000, 999.999","999.999, 300.000, 30.000","30.000, 999.999, 300.000"],k:0},
-{q:"425.000 + 175.000 = ...",a:["500.000","600.000","590.000","610.000"],k:1},
-{q:"800.000 - 275.000 = ...",a:["525.000","575.000","535.000","625.000"],k:0},
-{q:"12.000 x 4 = ...",a:["44.000","48.000","40.000","52.000"],k:1},
-{q:"90.000 : 3 = ...",a:["3.000","30.000","300.000","9.000"],k:1},
-{q:"456.789 dibulatkan ke ribuan...",a:["456.000","457.000","460.000","450.000"],k:1},
-];
-let idx=0,benar=0,sudah=false;
-function tampilkan(){idx=0;benar=0;render1();}
-function render1(){sudah=false;document.getElementById('soalKe').innerText=`Soal ${idx+1} dari 10`;document.getElementById('pertanyaan').innerText=soal[idx].q;document.getElementById('feedback').innerText="";document.getElementById('skor').innerText="";let h="";soal[idx].a.forEach((p,i)=>h+=`<div class="opt" onclick="jawab(this,${i})">${p}</div>`);document.getElementById('pilihan').innerHTML=h;}
-function jawab(el,i){if(sudah)return;sudah=true;if(i===soal[idx].k){el.classList.add('benar');benar++;document.getElementById('feedback').innerText="✅ BENAR! Hebat!";}else{el.classList.add('salah');document.getElementById('feedback').innerText="❌ Belum tepat!";}}
-function soalBerikutnya(){if(!sudah){alert("Jawab dulu ya!");return;}idx++;if(idx>=soal.length){document.getElementById('skor').innerText=`🎉 Nilai kamu: ${benar*10} / 100`;document.getElementById('pertanyaan').innerText="Selesai!";document.getElementById('pilihan').innerHTML=`<button onclick="tampilkan()">🔄 Ulangi</button>`;document.getElementById('soalKe').innerText="Selesai!";return;}render1();}
-// KUIS 2 KPK FPB
-const soal2=[
-{q:"Faktor dari 12 adalah...",a:["1,2,3,4,6,12","1,2,4,8,12","2,4,6,8","1,3,5,12"],k:0},
-{q:"Kelipatan dari 6 adalah...",a:["6,12,18,24,...","1,2,3,6","6,8,10,12","2,4,6,8"],k:0},
-{q:"Faktorisasi prima dari 12 adalah...",a:["2 x 6","2² x 3","2 x 3²","3 x 4"],k:1},
-{q:"FPB dari 12 dan 18 adalah...",a:["36","12","6","9"],k:2},
-{q:"KPK dari 12 dan 18 adalah...",a:["6","18","36","72"],k:2},
-{q:"FPB dari 8 dan 12 adalah...",a:["2","4","8","24"],k:1},
-{q:"KPK dari 4 dan 6 adalah...",a:["10","12","24","6"],k:1},
-{q:"Bus A tiap 6 menit, Bus B tiap 8 menit. Berangkat bersama, ketemu lagi setelah... (KPK)",a:["14 menit","24 menit","48 menit","12 menit"],k:1},
-{q:"Ibu punya 12 apel & 18 jeruk dibuat bingkisan sama banyak. Bingkisan terbanyak... (FPB)",a:["12 bingkisan","6 bingkisan","18 bingkisan","3 bingkisan"],k:1},
-{q:"KPK dari 6 dan 10 adalah...",a:["16","30","60","20"],k:1},
-];
-let idx2=0,benar2=0,sudah2=false;
-function tampilkan2(){idx2=0;benar2=0;render2();}
-function render2(){sudah2=false;document.getElementById('soalKe2').innerText=`Soal ${idx2+1} dari 10`;document.getElementById('pertanyaan2').innerText=soal2[idx2].q;document.getElementById('feedback2').innerText="";document.getElementById('skor2').innerText="";let h="";soal2[idx2].a.forEach((p,i)=>h+=`<div class="opt" onclick="jawab2(this,${i})">${p}</div>`);document.getElementById('pilihan2').innerHTML=h;}
-function jawab2(el,i){if(sudah2)return;sudah2=true;if(i===soal2[idx2].k){el.classList.add('benar');benar2++;document.getElementById('feedback2').innerText="✅ BENAR! Hebat!";}else{el.classList.add('salah');document.getElementById('feedback2').innerText="❌ Belum tepat, ingat tips S-K & S-B!";}}
-function soalBerikutnya2(){if(!sudah2){alert("Jawab dulu ya!");return;}idx2++;if(idx2>=soal2.length){document.getElementById('skor2').innerText=`🎉 Nilai kamu: ${benar2*10} / 100`;document.getElementById('pertanyaan2').innerText="Selesai!";document.getElementById('pilihan2').innerHTML=`<button onclick="tampilkan2()">🔄 Ulangi</button>`;document.getElementById('soalKe2').innerText="Selesai!";return;}render2();}
-</script>
-</body>
-  </html>
+<div class="card"><span class="badge">KELAS 6 • MATERI 2</span><h2>🔢 KPK dan FPB</h2><p><b>KPK</b> = Kelipatan Persekutuan Terkecil<br><b>FPB</b> = Faktor Persekutuan Terbesar</p></div>
+<div class="card"><h2>1. Kelipatan & Faktor</h2><p><b>Kelipatan 4:</b> 4, 8, 12, 16, 20...<br><b>Faktor 12:</b> 1, 2, 3, 4, 6, 12<br><b>Prima:</b> 2, 3, 5, 7, 11, 13...</p></div>
+<div class="card"><h2>2. Pohon Faktor</h2><div class="contoh">12 = 2² x 3<br>18 = 2 x 3²<br><b>FPB = Sama, Kecil:</b> 2 x 3 = <b>6</b><br><b>KPK = Semua, Besar:</b> 2² x 3² = <b>36</b></div></div>
+<div class="card"><h2>
