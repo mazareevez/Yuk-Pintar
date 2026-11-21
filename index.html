@@ -8,7 +8,7 @@
 *{box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
 body{margin:0;background:#FFF7E6;color:#333}
 header{background:#FF9F1C;color:white;padding:28px 18px;text-align:center;border-radius:0 0 28px 28px}
-header h1{margin:0;font-size:32px;cursor:pointer} header p{margin:8px 0 0}
+header h1{margin:0;font-size:32px;cursor:pointer}
 .wrap{max-width:820px;margin:auto;padding:16px}
 .card{background:white;border-radius:18px;padding:18px;margin:16px 0;box-shadow:0 4px 14px rgba(0,0,0,.08)}
 h2{color:#E76F51;margin-top:0} h3{color:#2A9D8F}
@@ -17,7 +17,6 @@ table{width:100%;border-collapse:collapse;margin:10px 0}
 td,th{border:1px solid #eee;padding:10px;text-align:center} th{background:#FF9F1C;color:white}
 .contoh{background:#E9F7F3;border-left:5px solid #2A9D8F;padding:12px;border-radius:10px;margin:10px 0}
 button{background:#FF9F1C;border:none;color:white;padding:12px 18px;border-radius:12px;font-size:16px;cursor:pointer;width:100%;margin-top:10px}
-button:hover{background:#E76F51}
 button.back{background:#eee;color:#333}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .pilih{background:#FFF3D6;border:2px solid #FFD166;padding:16px;border-radius:14px;text-align:center;cursor:pointer;font-weight:bold}
@@ -26,119 +25,141 @@ button.back{background:#eee;color:#333}
 .opt{background:#FFF3D6;border:2px solid #FFD166;padding:12px;border-radius:12px;margin:8px 0;cursor:pointer}
 .opt.benar{background:#B7E4C7;border-color:#2A9D8F}
 .opt.salah{background:#FFC9C9;border-color:#E76F51}
-#skor{font-size:20px;text-align:center;font-weight:bold;color:#2A9D8F}
+#skor,#skor2{font-size:20px;text-align:center;font-weight:bold;color:#2A9D8F}
 footer{text-align:center;padding:20px;color:#999;font-size:13px}
 .hilang{display:none}
 </style>
 </head>
 <body>
-<header onclick="tampil('home')">
-<h1>🧮 Yuk Pintar</h1>
-<p>Belajar Jadi Seru & Gampang!</p>
-</header>
+<header onclick="tampil('home')"><h1>🧮 Yuk Pintar</h1><p>Belajar Jadi Seru & Gampang!</p></header>
 <div class="wrap">
 
-<!-- ========== HALAMAN AWAL ========== -->
+<!-- HOME -->
 <div id="home">
-<div class="card" style="text-align:center;background:#2A9D8F;color:white">
-<h2 style="color:white">👋 Selamat Datang di Yuk Pintar!</h2>
-<p>Pilih mata pelajaranmu, pilih kelasmu, langsung belajar + kuis!</p>
-</div>
-<div class="card"><h2>📚 Pilih Mata Pelajaran</h2>
-<div class="grid">
+<div class="card" style="text-align:center;background:#2A9D8F;color:white"><h2 style="color:white">👋 Selamat Datang di Yuk Pintar!</h2><p>Pilih mata pelajaranmu, pilih kelasmu, langsung belajar + kuis!</p></div>
+<div class="card"><h2>📚 Pilih Mata Pelajaran</h2><div class="grid">
 <div class="pilih" onclick="tampil('matematika')">🔢 Matematika<small>SD & SMP</small></div>
 <div class="pilih" onclick="alert('IPA Segera Hadir!')">🔬 IPA<small>Segera Hadir</small></div>
 <div class="pilih" onclick="alert('Bahasa Indonesia Segera Hadir!')">📖 Bahasa Indonesia<small>Segera Hadir</small></div>
 <div class="pilih" onclick="alert('Bahasa Inggris Segera Hadir!')">🔤 Bahasa Inggris<small>Segera Hadir</small></div>
 </div></div>
-<div class="card"><h2>⭐ Kenapa Yuk Pintar?</h2><p>✅ Materi singkat & gampang dipahami<br>✅ Ada contoh soal<br>✅ Ada kuis langsung ada nilainya</p></div>
 </div>
 
-<!-- ========== PILIH JENJANG MATEMATIKA ========== -->
+<!-- MATEMATIKA JENJANG -->
 <div id="matematika" class="hilang">
 <button class="back" onclick="tampil('home')">⬅️ Kembali ke Beranda</button>
-<div class="card"><h2>🔢 Matematika</h2><p>Pilih jenjang & kelasmu:</p>
-<h3>🏫 SD</h3>
-<div class="grid">
-<div class="pilih" onclick="alert('Kelas 1 SD Segera Hadir!')">Kelas 1<small>Segera Hadir</small></div>
-<div class="pilih" onclick="alert('Kelas 2 SD Segera Hadir!')">Kelas 2<small>Segera Hadir</small></div>
-<div class="pilih" onclick="alert('Kelas 3 SD Segera Hadir!')">Kelas 3<small>Segera Hadir</small></div>
-<div class="pilih" onclick="alert('Kelas 4 SD Segera Hadir!')">Kelas 4<small>Segera Hadir</small></div>
-<div class="pilih" onclick="alert('Kelas 5 SD Segera Hadir!')">Kelas 5<small>Segera Hadir</small></div>
-<div class="pilih" onclick="tampil('kelas6')" style="background:#B7E4C7;border-color:#2A9D8F">Kelas 6<small>✅ Bilangan Cacah s.d 1.000.000</small></div>
-</div>
-<h3>🏫 SMP</h3>
-<div class="grid">
-<div class="pilih" onclick="alert('Kelas 7 SMP Segera Hadir!')">Kelas 7<small>Segera Hadir</small></div>
-<div class="pilih" onclick="alert('Kelas 8 SMP Segera Hadir!')">Kelas 8<small>Segera Hadir</small></div>
-<div class="pilih" onclick="alert('Kelas 9 SMP Segera Hadir!')">Kelas 9<small>Segera Hadir</small></div>
+<div class="card"><h2>🔢 Matematika</h2><h3>🏫 SD</h3><div class="grid">
+<div class="pilih" onclick="alert('Kelas 1 Segera Hadir!')">Kelas 1<small>Segera Hadir</small></div>
+<div class="pilih" onclick="alert('Kelas 2 Segera Hadir!')">Kelas 2<small>Segera Hadir</small></div>
+<div class="pilih" onclick="alert('Kelas 3 Segera Hadir!')">Kelas 3<small>Segera Hadir</small></div>
+<div class="pilih" onclick="alert('Kelas 4 Segera Hadir!')">Kelas 4<small>Segera Hadir</small></div>
+<div class="pilih" onclick="alert('Kelas 5 Segera Hadir!')">Kelas 5<small>Segera Hadir</small></div>
+<div class="pilih" onclick="tampil('kelas6menu')" style="background:#B7E4C7;border-color:#2A9D8F">Kelas 6<small>✅ 2 Materi</small></div>
+</div><h3>🏫 SMP</h3><div class="grid">
+<div class="pilih" onclick="alert('Kelas 7 Segera Hadir!')">Kelas 7<small>Segera Hadir</small></div>
+<div class="pilih" onclick="alert('Kelas 8 Segera Hadir!')">Kelas 8<small>Segera Hadir</small></div>
+<div class="pilih" onclick="alert('Kelas 9 Segera Hadir!')">Kelas 9<small>Segera Hadir</small></div>
 </div></div>
 </div>
 
-<!-- ========== MATERI KELAS 6 ========== -->
-<div id="kelas6" class="hilang">
+<!-- KELAS 6 MENU MATERI -->
+<div id="kelas6menu" class="hilang">
 <button class="back" onclick="tampil('matematika')">⬅️ Kembali ke Pilih Kelas</button>
-<div class="card"><span class="badge">MATEMATIKA KELAS 6 SD</span><h2>Bilangan Cacah sampai 1.000.000</h2><p>Bilangan cacah = <b>0, 1, 2, 3, ...</b> sampai <b>1.000.000</b>. Tidak ada minus, tidak ada koma.</p></div>
-<div class="card"><h2>1. Nilai Tempat</h2>
-<table><tr><th>Jutaan</th><th>Ratusan Ribu</th><th>Puluhan Ribu</th><th>Ribuan</th><th>Ratusan</th><th>Puluhan</th><th>Satuan</th></tr><tr><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr></table>
-<p><b>Contoh 456.789:</b> 4=400.000, 5=50.000, 6=6.000, 7=700, 8=80, 9=9</p>
-<div class="contoh"><b>Cara baca:</b> "Empat ratus lima puluh enam ribu tujuh ratus delapan puluh sembilan"</div></div>
-<div class="card"><h2>2. Membandingkan & Mengurutkan</h2><p>Lihat jumlah angkanya dulu. Yang lebih banyak angkanya, lebih besar.</p><div class="contoh">245.000 < 1.000.000<br>350.500 > 350.050<br>Urut kecil: 120.000, 45.000, 1.000.000 → <b>45.000, 120.000, 1.000.000</b></div></div>
-<div class="card"><h2>3. Operasi Hitung</h2><div class="contoh">425.000 + 175.000 = <b>600.000</b><br>800.000 - 275.000 = <b>525.000</b><br>12.000 x 5 = <b>60.000</b><br>90.000 : 3 = <b>30.000</b></div><h3>Pembulatan ke Ribuan</h3><div class="contoh">456.789 → <b>457.000</b> (karena 789 > 500)</div></div>
-<div class="card"><h2>🎯 Kuis - 10 Soal</h2><p id="soalKe">Soal 1 dari 10</p><h3 id="pertanyaan"></h3><div id="pilihan"></div><p id="feedback"></p><button onclick="soalBerikutnya()">Soal Berikutnya ➡️</button><p id="skor"></p></div>
+<div class="card"><h2>📚 Matematika Kelas 6 SD</h2><p>Pilih materimu:</p>
+<div class="grid">
+<div class="pilih" onclick="tampil('bilangan')" style="background:#B7E4C7">1. Bilangan Cacah<small>sampai 1.000.000 • ✅ Ada Kuis</small></div>
+<div class="pilih" onclick="tampil('kpkfpb')" style="background:#FFD6E8;border-color:#E76F51">2. KPK dan FPB<small>✅ Ada Kuis</small></div>
+</div></div>
+</div>
+
+<!-- MATERI 1 BILANGAN CACAH -->
+<div id="bilangan" class="hilang">
+<button class="back" onclick="tampil('kelas6menu')">⬅️ Kembali ke Materi Kelas 6</button>
+<div class="card"><span class="badge">KELAS 6 • MATERI 1</span><h2>Bilangan Cacah sampai 1.000.000</h2><p>Bilangan cacah = <b>0, 1, 2, 3, ...</b> sampai <b>1.000.000</b>.</p></div>
+<div class="card"><h2>1. Nilai Tempat</h2><table><tr><th>Jutaan</th><th>Ratusan Ribu</th><th>Puluhan Ribu</th><th>Ribuan</th><th>Ratusan</th><th>Puluhan</th><th>Satuan</th></tr><tr><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr></table><p><b>456.789:</b> 4=400.000, 5=50.000, 6=6.000, 7=700, 8=80, 9=9</p><div class="contoh"><b>Cara baca:</b> "Empat ratus lima puluh enam ribu tujuh ratus delapan puluh sembilan"</div></div>
+<div class="card"><h2>2. Membandingkan</h2><div class="contoh">245.000 < 1.000.000<br>350.500 > 350.050<br>Urut kecil: 45.000, 120.000, 1.000.000</div></div>
+<div class="card"><h2>3. Operasi Hitung</h2><div class="contoh">425.000 + 175.000 = <b>600.000</b><br>800.000 - 275.000 = <b>525.000</b><br>12.000 x 5 = <b>60.000</b><br>90.000 : 3 = <b>30.000</b><br>456.789 dibulatkan ke ribuan → <b>457.000</b></div></div>
+<div class="card"><h2>🎯 Kuis Bilangan Cacah</h2><p id="soalKe">Soal 1 dari 10</p><h3 id="pertanyaan"></h3><div id="pilihan"></div><p id="feedback"></p><button onclick="soalBerikutnya()">Soal Berikutnya ➡️</button><p id="skor"></p></div>
+</div>
+
+<!-- MATERI 2 KPK & FPB -->
+<div id="kpkfpb" class="hilang">
+<button class="back" onclick="tampil('kelas6menu')">⬅️ Kembali ke Materi Kelas 6</button>
+<div class="card"><span class="badge">KELAS 6 • MATERI 2</span><h2>🔢 KPK dan FPB</h2><p><b>KPK</b> = Kelipatan Persekutuan Terkecil (yang sama & paling kecil)<br><b>FPB</b> = Faktor Persekutuan Terbesar (pembagi yang sama & paling besar)</p></div>
+<div class="card"><h2>1. Ingat Dulu: Kelipatan & Faktor</h2>
+<p><b>Kelipatan 4:</b> 4, 8, 12, 16, 20, 24, ... (dikali 1,2,3...)</p>
+<p><b>Faktor 12:</b> 1, 2, 3, 4, 6, 12 (bilangan yang bisa membagi 12 sampai habis)</p>
+<p><b>Bilangan Prima:</b> 2, 3, 5, 7, 11, 13, 17, 19... (hanya bisa dibagi 1 & dirinya sendiri)</p>
+</div>
+<div class="card"><h2>2. Cara Cari KPK & FPB - Pohon Faktor</h2>
+<p><b>Contoh: KPK & FPB dari 12 dan 18</b></p>
+<div class="contoh">
+12 = 2 x 2 x 3 = <b>2² x 3</b><br>
+18 = 2 x 3 x 3 = <b>2 x 3²</b><br><br>
+<b>FPB = ambil yang SAMA, pangkat paling KECIL</b><br>
+Sama = 2 dan 3 → 2¹ x 3¹ = <b>6</b><br><br>
+<b>KPK = ambil SEMUA, pangkat paling BESAR</b><br>
+Semua = 2² x 3² = 4 x 9 = <b>36</b>
+</div>
+<p><b>Tips Hafalan:</b><br>FPB = <b>S</b>ama, <b>K</b>ecil (S-K)<br>KPK = <b>S</b>emua, <b>B</b>esar (S-B)</p>
+</div>
+<div class="card"><h2>3. Soal Cerita - Ini yang Sering Keluar!</h2>
+<div class="contoh">
+<b>Soal KPK - "Bersama-sama lagi / Berbunyi bersama":</b><br>
+Lampu A menyala tiap 6 detik, Lampu B tiap 8 detik. Kapan menyala bersama lagi?<br>
+→ KPK 6 & 8 = <b>24 detik</b><br><br>
+<b>Soal FPB - "Dibagi rata / Bingkisan terbanyak":</b><br>
+Ibu punya 12 apel & 18 jeruk, mau dibuat bingkisan sama banyak. Berapa bingkisan terbanyak?<br>
+→ FPB 12 & 18 = <b>6 bingkisan</b>. Isi tiap bingkisan: 2 apel & 3 jeruk.
+</div>
+</div>
+<div class="card"><h2>🎯 Kuis KPK & FPB</h2><p id="soalKe2">Soal 1 dari 10</p><h3 id="pertanyaan2"></h3><div id="pilihan2"></div><p id="feedback2"></p><button onclick="soalBerikutnya2()">Soal Berikutnya ➡️</button><p id="skor2"></p></div>
 </div>
 
 </div>
 <footer>Yuk Pintar • Belajar Matematika Jadi Seru</footer>
 <script>
 function tampil(id){
-  ['home','matematika','kelas6'].forEach(x=>document.getElementById(x).classList.add('hilang'));
-  document.getElementById(id).classList.remove('hilang');
-  window.scrollTo(0,0);
-  if(id==='kelas6') tampilkan();
+  ['home','matematika','kelas6menu','bilangan','kpkfpb'].forEach(x=>document.getElementById(x).classList.add('hilang'));
+  document.getElementById(id).classList.remove('hilang'); window.scrollTo(0,0);
+  if(id==='bilangan') tampilkan(); if(id==='kpkfpb') tampilkan2();
 }
+// KUIS 1
 const soal=[
 {q:"Bilangan yang BUKAN bilangan cacah...",a:["0","125.000","-5","1.000.000"],k:2},
-{q:"Nilai tempat angka 5 pada 356.789 adalah...",a:["5","500","50.000","500.000"],k:2},
-{q:"Cara membaca 250.000 yang benar...",a:["Dua ratus lima puluh ribu","Dua puluh lima ribu","Dua ratus lima ribu","Dua juta lima puluh ribu"],k:0},
-{q:"Yang paling besar adalah...",a:["99.999","100.000","999.999","1.000.000"],k:3},
+{q:"Nilai tempat angka 5 pada 356.789...",a:["5","500","50.000","500.000"],k:2},
+{q:"Cara membaca 250.000...",a:["Dua ratus lima puluh ribu","Dua puluh lima ribu","Dua ratus lima ribu","Dua juta lima puluh ribu"],k:0},
+{q:"Yang paling besar...",a:["99.999","100.000","999.999","1.000.000"],k:3},
 {q:"Urutkan dari TERKECIL: 300.000, 30.000, 999.999",a:["30.000, 300.000, 999.999","300.000, 30.000, 999.999","999.999, 300.000, 30.000","30.000, 999.999, 300.000"],k:0},
 {q:"425.000 + 175.000 = ...",a:["500.000","600.000","590.000","610.000"],k:1},
 {q:"800.000 - 275.000 = ...",a:["525.000","575.000","535.000","625.000"],k:0},
 {q:"12.000 x 4 = ...",a:["44.000","48.000","40.000","52.000"],k:1},
 {q:"90.000 : 3 = ...",a:["3.000","30.000","300.000","9.000"],k:1},
-{q:"456.789 dibulatkan ke ribuan terdekat...",a:["456.000","457.000","460.000","450.000"],k:1},
+{q:"456.789 dibulatkan ke ribuan...",a:["456.000","457.000","460.000","450.000"],k:1},
 ];
-let idx=0,benar=0,sudahJawab=false;
-function tampilkan(){
-  sudahJawab=false; idx=0; benar=0;
-  document.getElementById('soalKe').innerText=`Soal ${idx+1} dari 10`;
-  document.getElementById('pertanyaan').innerText=soal[idx].q;
-  document.getElementById('feedback').innerText=""; document.getElementById('skor').innerText="";
-  let h=""; soal[idx].a.forEach((p,i)=>{h+=`<div class="opt" onclick="jawab(this,${i})">${p}</div>`});
-  document.getElementById('pilihan').innerHTML=h;
-}
-function jawab(el,i){
-  if(sudahJawab) return; sudahJawab=true;
-  if(i===soal[idx].k){el.classList.add('benar');benar++;document.getElementById('feedback').innerText="✅ BENAR! Hebat!";}
-  else{el.classList.add('salah');document.getElementById('feedback').innerText="❌ Belum tepat, coba ingat lagi materinya!";}
-}
-function soalBerikutnya(){
-  if(!sudahJawab){alert("Jawab dulu ya!");return;}
-  idx++;
-  if(idx>=soal.length){
-    document.getElementById('skor').innerText=`🎉 SELESAI! Nilai kamu: ${benar*10} / 100 (${benar} benar dari 10 soal)`;
-    document.getElementById('pertanyaan').innerText="Kamu sudah menyelesaikan semua soal!";
-    document.getElementById('pilihan').innerHTML=`<button onclick="tampilkan()">🔄 Ulangi Kuis</button>`;
-    document.getElementById('soalKe').innerText="Selesai!"; return;
-  }
-  sudahJawab=false;
-  document.getElementById('soalKe').innerText=`Soal ${idx+1} dari 10`;
-  document.getElementById('pertanyaan').innerText=soal[idx].q;
-  document.getElementById('feedback').innerText=""; document.getElementById('skor').innerText="";
-  let h=""; soal[idx].a.forEach((p,i)=>{h+=`<div class="opt" onclick="jawab(this,${i})">${p}</div>`});
-  document.getElementById('pilihan').innerHTML=h;
-}
+let idx=0,benar=0,sudah=false;
+function tampilkan(){idx=0;benar=0;render1();}
+function render1(){sudah=false;document.getElementById('soalKe').innerText=`Soal ${idx+1} dari 10`;document.getElementById('pertanyaan').innerText=soal[idx].q;document.getElementById('feedback').innerText="";document.getElementById('skor').innerText="";let h="";soal[idx].a.forEach((p,i)=>h+=`<div class="opt" onclick="jawab(this,${i})">${p}</div>`);document.getElementById('pilihan').innerHTML=h;}
+function jawab(el,i){if(sudah)return;sudah=true;if(i===soal[idx].k){el.classList.add('benar');benar++;document.getElementById('feedback').innerText="✅ BENAR! Hebat!";}else{el.classList.add('salah');document.getElementById('feedback').innerText="❌ Belum tepat!";}}
+function soalBerikutnya(){if(!sudah){alert("Jawab dulu ya!");return;}idx++;if(idx>=soal.length){document.getElementById('skor').innerText=`🎉 Nilai kamu: ${benar*10} / 100`;document.getElementById('pertanyaan').innerText="Selesai!";document.getElementById('pilihan').innerHTML=`<button onclick="tampilkan()">🔄 Ulangi</button>`;document.getElementById('soalKe').innerText="Selesai!";return;}render1();}
+// KUIS 2 KPK FPB
+const soal2=[
+{q:"Faktor dari 12 adalah...",a:["1,2,3,4,6,12","1,2,4,8,12","2,4,6,8","1,3,5,12"],k:0},
+{q:"Kelipatan dari 6 adalah...",a:["6,12,18,24,...","1,2,3,6","6,8,10,12","2,4,6,8"],k:0},
+{q:"Faktorisasi prima dari 12 adalah...",a:["2 x 6","2² x 3","2 x 3²","3 x 4"],k:1},
+{q:"FPB dari 12 dan 18 adalah...",a:["36","12","6","9"],k:2},
+{q:"KPK dari 12 dan 18 adalah...",a:["6","18","36","72"],k:2},
+{q:"FPB dari 8 dan 12 adalah...",a:["2","4","8","24"],k:1},
+{q:"KPK dari 4 dan 6 adalah...",a:["10","12","24","6"],k:1},
+{q:"Bus A tiap 6 menit, Bus B tiap 8 menit. Berangkat bersama, ketemu lagi setelah... (KPK)",a:["14 menit","24 menit","48 menit","12 menit"],k:1},
+{q:"Ibu punya 12 apel & 18 jeruk dibuat bingkisan sama banyak. Bingkisan terbanyak... (FPB)",a:["12 bingkisan","6 bingkisan","18 bingkisan","3 bingkisan"],k:1},
+{q:"KPK dari 6 dan 10 adalah...",a:["16","30","60","20"],k:1},
+];
+let idx2=0,benar2=0,sudah2=false;
+function tampilkan2(){idx2=0;benar2=0;render2();}
+function render2(){sudah2=false;document.getElementById('soalKe2').innerText=`Soal ${idx2+1} dari 10`;document.getElementById('pertanyaan2').innerText=soal2[idx2].q;document.getElementById('feedback2').innerText="";document.getElementById('skor2').innerText="";let h="";soal2[idx2].a.forEach((p,i)=>h+=`<div class="opt" onclick="jawab2(this,${i})">${p}</div>`);document.getElementById('pilihan2').innerHTML=h;}
+function jawab2(el,i){if(sudah2)return;sudah2=true;if(i===soal2[idx2].k){el.classList.add('benar');benar2++;document.getElementById('feedback2').innerText="✅ BENAR! Hebat!";}else{el.classList.add('salah');document.getElementById('feedback2').innerText="❌ Belum tepat, ingat tips S-K & S-B!";}}
+function soalBerikutnya2(){if(!sudah2){alert("Jawab dulu ya!");return;}idx2++;if(idx2>=soal2.length){document.getElementById('skor2').innerText=`🎉 Nilai kamu: ${benar2*10} / 100`;document.getElementById('pertanyaan2').innerText="Selesai!";document.getElementById('pilihan2').innerHTML=`<button onclick="tampilkan2()">🔄 Ulangi</button>`;document.getElementById('soalKe2').innerText="Selesai!";return;}render2();}
 </script>
 </body>
-</html>
+  </html>
